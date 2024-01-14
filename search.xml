@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>MongoDB</title>
+      <link href="/2024/01/13/Study-MongoDB%E5%AD%A6%E4%B9%A0/"/>
+      <url>/2024/01/13/Study-MongoDB%E5%AD%A6%E4%B9%A0/</url>
+      
+        <content type="html"><![CDATA[<h1 id="为什么要用MongoDB"><a href="#为什么要用MongoDB" class="headerlink" title="为什么要用MongoDB"></a>为什么要用MongoDB</h1><p>具体的应用场景如： </p><ol><li>社交场景，使用 MongoDB 存储存储用户信息，以及用户发表的朋友圈信息，通过地理位置索引实现附近的人、地点等功能。 </li><li>游戏场景，使用 MongoDB 存储游戏用户信息，用户的装备、积分等直接以内嵌文档的形式存储，方便查询、高效率存储和访问。 </li><li>物流场景，使用 MongoDB 存储订单信息，订单状态在运送过程中会不断更新，以 MongoDB 内嵌数组的形式来存储，一次查询就能将 订单所有的变更读取出来。 </li><li>物联网场景，使用 MongoDB 存储所有接入的智能设备信息，以及设备汇报的日志信息，并对这些信息进行多维度的分析。 </li><li>视频直播，使用 MongoDB 存储用户信息、点赞互动信息等。</li></ol><p>这些应用场景中，数据操作方面的共同特点是： </p><ol><li>数据量大 </li><li>写入操作频繁（读写都很频繁） </li><li>价值较低的数据，对事务性要求不高 对于这样的数据，我们更适合使用MongoDB来实现数据的存储。</li></ol><p>MySQL与MongoDB对比：</p><p><img src="/../assets/Study-MongoDB%E5%AD%A6%E4%B9%A0/image-20240113223702004.png" alt="image-20240113223702004"></p><p>启动命令</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mongod -f ../conf/mongod.conf</span><br></pre></td></tr></table></figure><p>选择和创建数据库：</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">use 数据库名称</span><br></pre></td></tr></table></figure><p>删除数据库：</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.dropDatabase()</span><br></pre></td></tr></table></figure><p>增删改查：</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Study </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>JVM相关面试题</title>
       <link href="/2024/01/11/%E9%9D%A2%E8%AF%95-JVM%E7%9B%B8%E5%85%B3%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
       <url>/2024/01/11/%E9%9D%A2%E8%AF%95-JVM%E7%9B%B8%E5%85%B3%E9%9D%A2%E8%AF%95%E9%A2%98/</url>
