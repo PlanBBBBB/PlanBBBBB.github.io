@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>一致性哈希算法</title>
+      <link href="/2024/01/21/Study-%E4%B8%80%E8%87%B4%E6%80%A7%E5%93%88%E5%B8%8C%E7%AE%97%E6%B3%95/"/>
+      <url>/2024/01/21/Study-%E4%B8%80%E8%87%B4%E6%80%A7%E5%93%88%E5%B8%8C%E7%AE%97%E6%B3%95/</url>
+      
+        <content type="html"><![CDATA[<h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><p>本文学习自：</p><p><a href="https://2382546457.github.io/pages/7e25cb/#_2-%E4%B8%80%E8%87%B4%E6%80%A7%E5%93%88%E5%B8%8C">https://2382546457.github.io/pages/7e25cb/#_2-%E4%B8%80%E8%87%B4%E6%80%A7%E5%93%88%E5%B8%8C</a></p><p><a href="https://www.bilibili.com/video/BV1Hs411j73w/?spm_id_from=333.337.search-card.all.click&vd_source=fa7ba4ae353f08f1d08d1bb24528e96c">https://www.bilibili.com/video/BV1Hs411j73w/?spm_id_from=333.337.search-card.all.click&amp;vd_source=fa7ba4ae353f08f1d08d1bb24528e96c</a></p><h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>一致性Hash是一种特殊的Hash算法，由于其<mark>均衡性、持久性</mark>的映射特点，被广泛的应用于负载均衡领域，如<code>nginx</code>和<code>memcached</code>都采用了一致性Hash来作为<mark>集群负载均衡</mark>的方案。</p><h1 id="普通哈希"><a href="#普通哈希" class="headerlink" title="普通哈希"></a>普通哈希</h1><p>在介绍一致性哈希算法之前，先说一下普通的哈希算法，以便介绍它俩的区别。</p><p>在负载均衡中，使用普通的哈希算法进行负载均衡，假如用户上传一个图片，我们有三台服务器可以存储，上传到哪一个图片？</p><ol><li>将服务器编号，0、1、2</li><li>将图片进行哈希算法，hash（图片）&#x3D; 13，得到的 hash 值再跟机器的数量取模，13 % 3 &#x3D; 1，将图片存储到<strong>服务器1</strong> 中。</li><li>以后访问该图片，按照上述顺序得到存储图片的机器即可。</li></ol><p><img src="/../assets/Study-%E4%B8%80%E8%87%B4%E6%80%A7%E5%93%88%E5%B8%8C%E7%AE%97%E6%B3%95/42ba360b8045498391e1dac6f84aae53.png" alt="img"></p><p>但是，普通哈希有个很大的坏处：假如我又添加了两台机器，此时机器数量变成 5，之前那张图片使用 hash（图片）&#x3D; 13，取模 13 % 5 &#x3D; 3，于是程序去 <strong>服务器2</strong> 找图片，但是我们的图片之前存储在 服务器1。bug不就来了？</p><blockquote><p>看到这里你应该意识到：一旦服务器数量修改，hash之后的取模运算就会改变，对应的计算结果也就改变了，之前的计算结果 与 现在的计算结果 不一样，绝大多数数据就需要重新存储。这是个致命错误。</p></blockquote><h1 id="一致性哈希"><a href="#一致性哈希" class="headerlink" title="一致性哈希"></a>一致性哈希</h1><p>普通哈希失误就失误在对机器数量取模上，我们不对机器数取模，对 2^32 取模，什么意思呢？</p><p>我们首先将 [0， 2^32-1] 围成一个圆圈：</p><p><img src="/../assets/Study-%E4%B8%80%E8%87%B4%E6%80%A7%E5%93%88%E5%B8%8C%E7%AE%97%E6%B3%95/1dabc6d21275466885e876058dd81d7a.png" alt="圆圈"></p><p>如图，0 的左侧就是 2^32-1。我们把这个由 2^32 个数组成的圆圈称为哈希环</p><p>于是我们存图片的步骤变为：</p><p>将服务器的地址计算哈希值，hash(服务器)，用这个值与 2^32 取模，那么所有服务器都会在这个圆圈上代表一个点</p><p><img src="/../assets/Study-%E4%B8%80%E8%87%B4%E6%80%A7%E5%93%88%E5%B8%8C%E7%AE%97%E6%B3%95/image-20231109001357945.png" alt="image-20231109001357945"></p><p>将要存储的图片计算哈希值，hash(图片)，用这个值与 2^32 取模，那么所有图片都会在这个圆圈上代表一个点</p><p>怎么给这些图片选择一个服务器呢？只需要在这个环上一直往后遍历就行了，上图中左边三个图片存储在服务器A，右边的三个图片存储在服务器C。</p><p><img src="/../assets/Study-%E4%B8%80%E8%87%B4%E6%80%A7%E5%93%88%E5%B8%8C%E7%AE%97%E6%B3%95/image-20231109001655962.png" alt="image-20231109001655962"></p><p>程序查找时也可以这样做：计算hash值 -&gt; 与 2^32 取模 -&gt; 放在哈希环上往右找第一个服务器。</p><p>遇到服务器宕机或者新增服务器时，就可以只破坏一部分数据，保护其余数据。</p><p>假如此时 服务器C 宕机，那么右边的三个文件就只能存储到 服务器B 中，但是也仅仅是三个文件。</p><p>一致性哈希的的优缺点：</p><ul><li><p>优点 ：遇到节点不稳定的情况可以保护多数数据</p></li><li><p>缺点 ：在节点数量太少的情况下，容易因为节点分布不均匀而造成数据倾斜问题，也就是被缓存的数据大都集中存储在某个节点上，从而出现数据分布不均匀的情况，这种情况被称为哈希倾斜</p></li></ul><p>为了解决这种数据倾斜问题，一致性哈希算法引入了<strong>虚拟节点机制</strong>，即对每一个节点都计算多个哈希值，每个计算结果都放置在哈希环上，称为虚拟节点。一个实际的物理节点可以对应多个虚拟节点，虚拟节点越多，哈希环上的节点就越多，数据被均匀分配的概率就越大，哈希环倾斜造成的影响就越小。</p><blockquote><p>寻找过程就变为：hash（图片）-&gt; 取模得到hash值 -&gt; 向右找到虚拟节点 -&gt; 根据虚拟节点找到物理节点</p></blockquote><p><img src="/../assets/Study-%E4%B8%80%E8%87%B4%E6%80%A7%E5%93%88%E5%B8%8C%E7%AE%97%E6%B3%95/image-20231109003646430.png" alt="image-20231109003646430"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Study </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 算法 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Jasypt加密</title>
       <link href="/2024/01/20/Work-Jasypt%E5%8A%A0%E5%AF%86/"/>
       <url>/2024/01/20/Work-Jasypt%E5%8A%A0%E5%AF%86/</url>
@@ -350,6 +375,8 @@
         <tags>
             
             <tag> 408 </tag>
+            
+            <tag> 算法 </tag>
             
         </tags>
       
