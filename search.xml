@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>实习收获</title>
+      <link href="/2024/02/03/Work-%E5%AE%9E%E4%B9%A0%E6%94%B6%E8%8E%B7/"/>
+      <url>/2024/02/03/Work-%E5%AE%9E%E4%B9%A0%E6%94%B6%E8%8E%B7/</url>
+      
+        <content type="html"><![CDATA[<h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><h1 id="Jasypt加密"><a href="#Jasypt加密" class="headerlink" title="Jasypt加密"></a>Jasypt加密</h1><p>文章链接：</p><h1 id="动态加密"><a href="#动态加密" class="headerlink" title="动态加密"></a>动态加密</h1><p>每个省份根据自己的加密规则进行加密传输</p><h1 id="切换数据源"><a href="#切换数据源" class="headerlink" title="切换数据源"></a>切换数据源</h1><h1 id="定时器"><a href="#定时器" class="headerlink" title="定时器"></a>定时器</h1><h1 id="Mybatis拦截器和自定义分页注解"><a href="#Mybatis拦截器和自定义分页注解" class="headerlink" title="Mybatis拦截器和自定义分页注解"></a>Mybatis拦截器和自定义分页注解</h1><p>通过自定义了一个分页注解，在每一个需要进行分页的mapper方法上添加上这个注解，这样在xml里就不用自己写limit语句了，通过mybatis的拦截器拦截到除增删改外的查语句，即只会去对<code>SELECT</code>类型的去进行判断，而不会对<code>INSERT</code>，<code>UPDATE</code>，&#96;&#96;</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Work </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 总结 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>一致性哈希算法</title>
       <link href="/2024/01/21/Study-%E4%B8%80%E8%87%B4%E6%80%A7%E5%93%88%E5%B8%8C%E7%AE%97%E6%B3%95/"/>
       <url>/2024/01/21/Study-%E4%B8%80%E8%87%B4%E6%80%A7%E5%93%88%E5%B8%8C%E7%AE%97%E6%B3%95/</url>
