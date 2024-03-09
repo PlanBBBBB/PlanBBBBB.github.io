@@ -1,0 +1,608 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>PlanB's Blog | PlanB's Blog</title><meta name="author" content="PlanB,2741718884@qq.com"><meta name="copyright" content="PlanB"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="介绍项目智学轩在线教育项目是一个B2B2C的在线教育平台，本项目包括了用户端、机构端、运营端。 核心模块包括：内容管理、媒资管理、课程搜索、订单支付、选课管理、认证授权等。 项目采用前后端分离的技术架构，使用Spring Cloud技术栈构建微服务，数据库采用MySQL，还使用了Redis、RabbitMQ、Elasticsearch等技术。 项目技术架构相关项目采用什么技术架构项目采用前后端分离">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PlanB&#39;s Blog">
+<meta property="og:url" content="https://planbbbbb.github.io/2024/03/09/Project-%E6%99%BA%E5%AD%A6%E8%BD%A9%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/index.html">
+<meta property="og:site_name" content="PlanB&#39;s Blog">
+<meta property="og:description" content="介绍项目智学轩在线教育项目是一个B2B2C的在线教育平台，本项目包括了用户端、机构端、运营端。 核心模块包括：内容管理、媒资管理、课程搜索、订单支付、选课管理、认证授权等。 项目采用前后端分离的技术架构，使用Spring Cloud技术栈构建微服务，数据库采用MySQL，还使用了Redis、RabbitMQ、Elasticsearch等技术。 项目技术架构相关项目采用什么技术架构项目采用前后端分离">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://planbbbbb.github.io/img/num2.jpg">
+<meta property="article:published_time" content="2024-03-09T00:19:00.000Z">
+<meta property="article:modified_time" content="2024-03-09T15:03:59.817Z">
+<meta property="article:author" content="PlanB">
+<meta property="article:tag" content="A,B,C,D">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://planbbbbb.github.io/img/num2.jpg"><link rel="shortcut icon" href="/./img/%E9%A5%AE%E6%96%99.png"><link rel="canonical" href="https://planbbbbb.github.io/2024/03/09/Project-%E6%99%BA%E5%AD%A6%E8%BD%A9%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: true
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'PlanB\'s Blog',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-03-09 23:03:59'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/custom.css" media="defer" onload="this.media='all'"><!-- hexo injector head_end start --><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiperstyle.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-categories-card@1.0.0/lib/categorybar.css"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-wowjs/lib/animate.min.css" media="print" onload="this.media='screen'"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/./img/%E5%A4%B4%E5%83%8F.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">36</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">12</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 链接</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></li><li><a class="site-page child" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/./img/num2.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">PlanB's Blog</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 链接</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></li><li><a class="site-page child" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">无题</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-03-09T00:19:00.000Z" title="发表于 2024-03-09 08:19:00">2024-03-09</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-03-09T15:03:59.817Z" title="更新于 2024-03-09 23:03:59">2024-03-09</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="介绍项目"><a href="#介绍项目" class="headerlink" title="介绍项目"></a>介绍项目</h1><p>智学轩在线教育项目是一个B2B2C的在线教育平台，本项目包括了用户端、机构端、运营端。</p>
+<p>核心模块包括：内容管理、媒资管理、课程搜索、订单支付、选课管理、认证授权等。</p>
+<p>项目采用前后端分离的技术架构，使用Spring Cloud技术栈构建微服务，数据库采用MySQL，还使用了Redis、RabbitMQ、Elasticsearch等技术。</p>
+<h1 id="项目技术架构相关"><a href="#项目技术架构相关" class="headerlink" title="项目技术架构相关"></a>项目技术架构相关</h1><h2 id="项目采用什么技术架构"><a href="#项目采用什么技术架构" class="headerlink" title="项目采用什么技术架构"></a>项目采用什么技术架构</h2><p>项目采用前后端分离的技术架构，使用Spring Cloud技术栈构建微服务，数据库采用MySQL，还使用了Nacos、Spring Cloud Gateway、Redis、RabbitMQ、Elasticsearch、XXL-Job等技术。</p>
+<h3 id="Gateway怎么用的？"><a href="#Gateway怎么用的？" class="headerlink" title="Gateway怎么用的？"></a>Gateway怎么用的？</h3><p>本项目使用Spring Cloud Gateway作用网关，网关的作用是负载均衡、路由转发，见下图：</p>
+<p><img src="/../assets/Project-%E6%99%BA%E5%AD%A6%E8%BD%A9%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/Aspose.Words.47a7d76e-91f2-4c3e-b54a-929cdfaa0c47.006.png"></p>
+<p>前端请求到Nginx，通过负载均衡到Gateway网关，通过网关将请求转发至各个微服务。</p>
+<p>网关进行路由时需要知道每个微服务实例的地址，网关从nacos读取服务地址，如下图：</p>
+<p><img src="/../assets/Project-%E6%99%BA%E5%AD%A6%E8%BD%A9%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/Aspose.Words.47a7d76e-91f2-4c3e-b54a-929cdfaa0c47.007.png"></p>
+<p>流程如下：</p>
+<ol>
+<li><p>微服务启动，将自己注册到Nacos，Nacos记录了各微服务实例的地址。</p>
+</li>
+<li><p>网关从Nacos读取服务列表，包括服务名称、服务地址等。</p>
+</li>
+<li><p>请求到达网关，网关将请求路由到具体的微服务。</p>
+</li>
+</ol>
+<p>本项目网关还具有<strong>统一鉴权</strong>功能：</p>
+<ol>
+<li>网站白名单</li>
+</ol>
+<p>在白名单的中的地址不进行身份校验直接放行。</p>
+<ol start="2">
+<li>身份校验</li>
+</ol>
+<p>校验请求中jwt令牌的合法性，令牌合法则继续访问，否则拒绝访问。</p>
+<h3 id="Redis怎么用的？"><a href="#Redis怎么用的？" class="headerlink" title="Redis怎么用的？"></a>Redis怎么用的？</h3><p>项目中使用Redis缓存以下信息，每种类型的信息缓存时间不同：</p>
+<ol>
+<li><p>验证码</p>
+</li>
+<li><p>课程发布信息</p>
+</li>
+<li><p>课程视频信息</p>
+</li>
+<li><p><strong>我的课程</strong></p>
+</li>
+<li><p>我的订单</p>
+</li>
+</ol>
+<p>项目使用Redisson实现分布式锁，避免课程查询等公开接口出现缓存击穿问题。</p>
+<h3 id="RabbitMQ怎么用的？"><a href="#RabbitMQ怎么用的？" class="headerlink" title="RabbitMQ怎么用的？"></a>RabbitMQ怎么用的？</h3><p>消息队列在本项目用于<strong>订单服务</strong>，支付成功通过消息队列将结果通知给其它微服务。</p>
+<p><img src="/../assets/Project-%E6%99%BA%E5%AD%A6%E8%BD%A9%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/image-20240309224758558.png" alt="image-20240309224758558"></p>
+<p>订单服务完成支付后将支付结果发给每一个与订单服务对接的微服务，订单服务将消息发给交换机，由交换机广播消息，每个订阅消息的微服务都可以接收到支付结果.</p>
+<p>微服务收到支付结果根据订单的类型去更新自己的业务数据。</p>
+<h3 id="Elasticsearch怎么用的？"><a href="#Elasticsearch怎么用的？" class="headerlink" title="Elasticsearch怎么用的？"></a>Elasticsearch怎么用的？</h3><p>本项目使用Elasticsearch对课程发布信息进行索引和搜索。</p>
+<ol>
+<li><p>首先创建课程信息的索引</p>
+</li>
+<li><p>定义索引、搜索接口。</p>
+</li>
+</ol>
+<blockquote>
+<p>课程发布由内容管理服务远程调用搜索服务添加索引接口将课程信息添加至ES索引库。</p>
+<p>课程下架由内容管理服务远程调用搜索服务删除索引接口将课程信息从ES索引库删除。</p>
+</blockquote>
+<ol start="3">
+<li>课程搜索接口使用了布尔查询、聚合搜索、过滤器、高亮显示等功能。</li>
+</ol>
+<h3 id="XXL-Job怎么用的？"><a href="#XXL-Job怎么用的？" class="headerlink" title="XXL-Job怎么用的？"></a>XXL-Job怎么用的？</h3><p>首先说XXL-JOB的工作流程，然后说本项目使用XXL-JOB具体方案。</p>
+<p>1 XXL-JOB的工作流程</p>
+<p>XXL-JOB分布式任务调度服务由调用中心和执行器组成，调用中心负责按任务调度策略向执行器下发任务，执行器负责接收任务执行任务。如下图：</p>
+<p><img src="/../assets/Project-%E6%99%BA%E5%AD%A6%E8%BD%A9%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/Aspose.Words.47a7d76e-91f2-4c3e-b54a-929cdfaa0c47.009.png"></p>
+<p>1）在微服务配置执行器名称、端口，启动微服务后执行器向调用中心注册。</p>
+<p>可通过调度中心页面查询执行器是否注册成功</p>
+<p><img src="/../assets/Project-%E6%99%BA%E5%AD%A6%E8%BD%A9%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/Aspose.Words.47a7d76e-91f2-4c3e-b54a-929cdfaa0c47.010.png"></p>
+<p>2）在微服务定义任务方法</p>
+<p>下边是课程发布任务的示例</p>
+<p><img src="/../assets/Project-%E6%99%BA%E5%AD%A6%E8%BD%A9%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/Aspose.Words.47a7d76e-91f2-4c3e-b54a-929cdfaa0c47.011.png"></p>
+<p>3）在调用中心配置任务调度策略</p>
+<p><img src="/../assets/Project-%E6%99%BA%E5%AD%A6%E8%BD%A9%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/Aspose.Words.47a7d76e-91f2-4c3e-b54a-929cdfaa0c47.012.png"></p>
+<p>4）启动任务进行任务调度。</p>
+<p>2、本项目使用XXL-JOB的具体方案</p>
+<p>本项目使用XXL-JOB完成课程发布数据同步、支付结果通知等任务。</p>
+<p>下边以视频处理任务为例说明：</p>
+<p>\1) 调度中心采用分片广播方式下发任务</p>
+<p>执行器部署在多个微服务实例，收到任务从数据库读取待处理任务列表：</p>
+<p><img src="/../assets/Project-%E6%99%BA%E5%AD%A6%E8%BD%A9%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/Aspose.Words.47a7d76e-91f2-4c3e-b54a-929cdfaa0c47.013.png"></p>
+<p>每个执行器收到广播任务有两个参数：分片总数、分片序号。每个执行器从数据表取任务时可以让任务id 模上 分片总数，如果等于分片序号则执行此任务。</p>
+<p>上边两个执行器实例的分片总数为2，序号为0、1，从任务1开始，如下：</p>
+<p>1  %  2 &#x3D; 1    执行器2执行</p>
+<p>2  %  2 &#x3D;  0    执行器1执行</p>
+<p>3  %  2 &#x3D;  1     执行器2执行</p>
+<p>2）得到待处理任务启动多任务进行任务处理</p>
+<p>下图是视频上传及处理的业务流程：</p>
+<p>上传视频成功向视频处理待处理表添加记录</p>
+<p>由于调度中心进行任务调度，执行器从数据库查询待处理任务，启动多线程进行处理。</p>
+<p><strong>2.10 如何保证任务不重复执行?</strong></p>
+<p>1、执行器收到作业分片广播，计算 任务id 模上 分片总数的结果，等于分片序号任务去执行，这里保证了不同的执行器执行不同的任务。</p>
+<p>2、配置调度过期策略，避免同一个执行器多次重复执行同一个任务</p>
+<p>调度过期策略如下：<br><code>        </code>- 忽略：调度过期后，忽略过期的任务，从当前时间开始重新计算下次触发时间；<br><code>        </code>- 立即执行一次：调度过期后，立即执行一次，并从当前时间开始重新计算下次触发时间；<br><code>    </code>- 阻塞处理策略：调度过于密集执行器来不及处理时的处理策略；</p>
+<p>这里我们选择忽略，如果立即执行一次可能会重复调度。</p>
+<p><img src="/../assets/Project-%E6%99%BA%E5%AD%A6%E8%BD%A9%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/Aspose.Words.47a7d76e-91f2-4c3e-b54a-929cdfaa0c47.015.png"></p>
+<p>其次，再看阻塞处理策略，阻塞处理策略就是当前执行器正在执行任务还没有结束时调度时间到达到，此时该如何处理。</p>
+<p>查看文档如下：<br><code>        </code>单机串行（默认）：调度请求进入单机执行器后，调度请求进入FIFO队列并以串行方式运行；<br><code>        </code>丢弃后续调度：调度请求进入单机执行器后，发现执行器存在运行的调度任务，本次请求将会被丢弃并标记为失败；<br><code>        </code>覆盖之前调度：调度请求进入单机执行器后，发现执行器存在运行的调度任务，将会终止运行中的调度任务并清空队列，然后运行本地调度任务；</p>
+<p>这里选择 丢弃后续调度，避免重复调度。</p>
+<p>3、保证任务处理的幂等性</p>
+<p>幂等性是为了解决重复提交问题，比如：恶意刷单，重复支付等。</p>
+<p>解决幂等性常用的方案：</p>
+<p>1）数据库约束，比如：唯一索引，主键。</p>
+<p>2）乐观锁，常用于数据库，更新数据时根据乐观锁状态去更新。</p>
+<p>3）唯一序列号，操作传递一个唯一序列号，操作时判断与该序列号相等则执行。</p>
+<p>这里我们在数据库视频处理表中添加处理状态字段，视频处理完成更新状态为完成，执行视频处理前判断状态是否完成，如果完成则不再处理。</p>
+<h3 id="接口异常如何处理？"><a href="#接口异常如何处理？" class="headerlink" title="接口异常如何处理？"></a>接口异常如何处理？</h3><p>接口在过程中存在异常由统一异常处理器进行处理。</p>
+<p>1、处理自定义异常</p>
+<p>程序在编写代码时根据校验结果主动抛出自定义异常类Exception的对象，并编写详细的异常信息，异常处理器捕获异常信息记录异常日志并响应给用户。</p>
+<p>2、处理未知异常</p>
+<p>接口执行过程中的一些运行时异常也会由异常处理器统一捕获，记录异常日志，统一响应给用户500错误及统一的异常信息。</p>
+<p>异常处理器使用控制器增加注解@ControllerAdvice和异常处理注解@ExceptionHandler来实现。</p>
+<h3 id="微服务之间接口如何调用？"><a href="#微服务之间接口如何调用？" class="headerlink" title="微服务之间接口如何调用？"></a>微服务之间接口如何调用？</h3><p>微服务之间使用Feign进行远程调用，每个微服务都将自己注册到了服务注册中心nacos中，微服务在远程调用时会从服务注册中心找到目标服务的地址进行远程调用。</p>
+<p>当目标服务异常在远程调用时发生熔断，此时调用方要定义降级方法保证请求快速响应。</p>
+<p>项目中使用FeignClient的fallbackFactory 编写降级方法，使用fallbackFactory 的好处可以获取发生熔断的异常信息。</p>
+<p><strong>2.15 什么是熔断降级？</strong></p>
+<p>熔断：</p>
+<p>当下游服务异常而断开与上游服务的交互，它就相当于保险丝，下游服务异常触发了熔断，从而保证上游服务不受影响。</p>
+<p><img src="/../assets/Project-%E6%99%BA%E5%AD%A6%E8%BD%A9%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/Aspose.Words.47a7d76e-91f2-4c3e-b54a-929cdfaa0c47.018.png"></p>
+<p>降级：</p>
+<p>当下游服务异常触发熔断后，上游服务就不再去调用异常的微服务而是执行了降级处理逻辑，这个降级处理逻辑可以是本地一个单独的方法。</p>
+<p><img src="/../assets/Project-%E6%99%BA%E5%AD%A6%E8%BD%A9%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/Aspose.Words.47a7d76e-91f2-4c3e-b54a-929cdfaa0c47.019.png"></p>
+<p>两者都是为了保护系统，熔断是当下游服务异常时一种保护系统的手段，降级是熔断后上游服务处理熔断的方法。</p>
+<p>项目中使用FeignClient的fallbackFactory 编写降级方法，使用fallbackFactory 的好处可以获取发生熔断的异常信息。</p>
+<p>如下代码示例：</p>
+<p>定义FeignClient接口时指定fallbackFactory 。</p>
+<table>
+<thead>
+<tr>
+<th align="left">Java<br>@FeignClient(value &#x3D; “media-api”,fallbackFactory &#x3D; MediaServiceClientFallbackFactory.class)</th>
+</tr>
+</thead>
+</table>
+<p>定义fallbackFactory ：</p>
+<table>
+<thead>
+<tr>
+<th align="left">Java<br><br>@Slf4j<br>@Component<br>public class MediaServiceClientFallbackFactory implements FallbackFactory<MediaServiceClient> {<br><code>    </code>@Override<br><code>    </code>public MediaServiceClient create(Throwable throwable) {<br><code>        </code>return new MediaServiceClient(){<br><code>            </code>@Override<br><code>            </code>public String uploadFile(MultipartFile upload, String folder, String objectName) {<br><code>                </code><em>log</em>.error(“远程调用媒资管理服务熔断异常：{}”,throwable);<br><code>                </code>return null;<br><code>            </code>}<br><code>        </code>};<br><code>    </code>}<br>}</th>
+</tr>
+</thead>
+</table>
+<p><strong>2.16 如何解决微服务雪崩?</strong></p>
+<p>什么是雪崩效应？</p>
+<p><img src="/../assets/Project-%E6%99%BA%E5%AD%A6%E8%BD%A9%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/Aspose.Words.47a7d76e-91f2-4c3e-b54a-929cdfaa0c47.020.png"></p>
+<p>微服务的雪崩效应表现在服务与服务之间调用，当其中一个服务无法提供服务可能导致其它服务也死掉，比如：服务B调用服务A，由于A服务异常导致B服务响应缓慢，最后B、C等服务都不可用，像这样由一个服务所引起的一连串的多个服务无法提供服务即是微服务的雪崩效应。</p>
+<p>如何解决微服务雪崩效应？</p>
+<p>发生服务等待的原因可能是Feign的请求超时过长，也可能是Tomcat的线程用完，解决前者只要配置Feign的连接超时时长小一些即可，解决后者则需要线程隔离，给高并发的方法设置自己的专属线程池，这样当高并发到来其它的接口不受高并发方法的影响。</p>
+<p>另外在还可以从以下方面去预防微服务雪崩：</p>
+<p>1、熔断</p>
+<p>当目标服务无法请求可以通过熔断将链路断开。</p>
+<p>使用histrix框架实现。</p>
+<p>2、降级</p>
+<p>当熔断发生走降级方法可以返回预先设置的数据。</p>
+<p>使用histrix框架实现。</p>
+<p>3、限流</p>
+<p>对于高并发请求的接口要进行限流，避免无限制的请求压力全部到达系统。</p>
+<p>限流的方法可以用nginx实现，也可以用sentinel等中间件。</p>
+<h1 id="业务流程与技术方案"><a href="#业务流程与技术方案" class="headerlink" title="业务流程与技术方案"></a>业务流程与技术方案</h1><h2 id="内容管理模块"><a href="#内容管理模块" class="headerlink" title="内容管理模块"></a>内容管理模块</h2><p><strong>3.1.1 整体业务流程</strong></p>
+<p>内容管理由教学机构人员和平台的运营人员共同完成。</p>
+<p>教学机构人员的业务流程如下：</p>
+<p>1、登录教学机构。</p>
+<p>2、维护课程信息，添加一门课程需要编辑课程的基本信息、上传课程图片、课程营销信息、课程计划、上传课程视频、课程师资信息等内容。</p>
+<p>3、课程信息编辑完成，通过课程预览确认无误后提交课程审核。</p>
+<p>4、待运营人员课程审核通过后方可进行课程发布。</p>
+<p>运营人员的业务流程如下：</p>
+<p>1、查询待审核的课程信息。</p>
+<p>2、审核课程信息。</p>
+<p>3、提交审核结果。</p>
+<p>课程从添加到发布的整体流程如下：</p>
+<p><img src="/../assets/Project-%E6%99%BA%E5%AD%A6%E8%BD%A9%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/Aspose.Words.47a7d76e-91f2-4c3e-b54a-929cdfaa0c47.021.png"></p>
+<p><strong>3.1.2 流程控制方案</strong></p>
+<p>如何控制课程审核通过才可以发布课程呢？</p>
+<p>在课程基本表course_base表设置课程审核状态字段，包括：未提交、已提交(未审核)、审核通过、审核不通过。</p>
+<p>下边是课程状态的转化关系：</p>
+<p><img src="/../assets/Project-%E6%99%BA%E5%AD%A6%E8%BD%A9%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/Aspose.Words.47a7d76e-91f2-4c3e-b54a-929cdfaa0c47.022.png"></p>
+<p>说明如下：</p>
+<p>1、一门课程新增后它的审核状为”未提交“，发布状态为”未发布“。</p>
+<p>2、课程信息编辑完成，教学机构人员执行”提交审核“操作。此时课程的审核状态为”已提交“。</p>
+<p>3、当课程状态为已提交时运营平台人员对课程进行审核。</p>
+<p>4、运营平台人员审核课程，结果有两个：审核通过、审核不通过。</p>
+<p>5、课程审核过后不管状态是通过还是不通过，教学机构可以再次修改课程并提交审核，此时课程状态为”已提交“。此时运营平台人员再次审核课程。</p>
+<p>6、课程审核通过，教学机构人员可以发布课程，发布成功后课程的发布状态为”已发布“。</p>
+<p>7、课程发布后通过”下架“操作可以更改课程发布状态为”下架“</p>
+<p>8、课程下架后通过”上架“操作可以再次发布课程，上架后课程发布状态为“发布”。</p>
+<p><strong>3.1.3 课程审核流程</strong></p>
+<p>教学机构提交课程审核后，平台运营人员登录运营平台查询待审核的记录。</p>
+<p><img src="/../assets/Project-%E6%99%BA%E5%AD%A6%E8%BD%A9%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/Aspose.Words.47a7d76e-91f2-4c3e-b54a-929cdfaa0c47.023.png"></p>
+<p>具体审核的过程与课程预览的过程类似，运营人员查看课程信息、课程视频等内容。</p>
+<p>如果存在问题则审核不通过，并附上审核不通过的原因供教学机构人员查看。</p>
+<p>如果课程内容没有违规信息且课程内容全面则审核通过。</p>
+<p>课程审核通过后教学机构发布课程成功。</p>
+<p><strong>3.1.4 课程发布分布式事务方案</strong></p>
+<p>课程发布操作后，先更新数据库中的课程发布状态，更新后向redis、elasticsearch、MinIO写课程信息，这里存在分布式事务，只要在一定时间内最终向redis、elasticsearch、MinIO写数据成功即可，所以课程发布满足AP即可，保证可用性实现最终数据一致性。</p>
+<p>分布式事务控制的方案采用本地消息表加任务调度的方案，下图是具体的技术方案：</p>
+<p><img src="/../assets/Project-%E6%99%BA%E5%AD%A6%E8%BD%A9%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/Aspose.Words.47a7d76e-91f2-4c3e-b54a-929cdfaa0c47.024.png"></p>
+<p>1、在内容管理服务的数据库中添加一个消息表，消息表和课程发布表在同一个数据库。</p>
+<p>2、点击课程发布通过本地事务向课程发布表写入课程发布信息，同时向消息表写课程发布的消息。两条记录保证同时存在或同时不存在。</p>
+<p>3、启动任务调度系统定时调度内容管理服务去定时扫描消息表的记录。</p>
+<p>4、当扫描到课程发布的消息时即开始完成向redis、elasticsearch、MinIO同步数据的操作。</p>
+<p>5、同步数据的任务完成后删除消息表记录。</p>
+<p>下图是课程发布操作的流程：</p>
+<p><img src="/../assets/Project-%E6%99%BA%E5%AD%A6%E8%BD%A9%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/Aspose.Words.47a7d76e-91f2-4c3e-b54a-929cdfaa0c47.025.png"></p>
+<p>1、执行发布操作，内容管理服务存储课程发布表的同时向消息表添加一条“课程发布任务”。这里使用本地事务保证课程发布信息保存成功，同时消息表也保存成功。</p>
+<p>2、任务调度服务定时调度内容管理服务扫描消息表，由于课程发布操作后向消息表插入一条课程发布任务，此时扫描到一条任务。</p>
+<p>3、拿到任务开始执行任务，分别向redis、elasticsearch及文件系统存储数据。</p>
+<p>4、任务完成后删除消息表记录。</p>
+<p><strong>3.1.5 课程发布任务调度方案</strong></p>
+<p>由xxl-job调度中心根据任务策略通过分片广播的模式下发任务到执行器，执行器扫描本地消息表中的未处理的消息(任务)，通过多线程执行任务，每个任务为一门课程的发布任务，执行完成删除本地消息表的记录。</p>
+<h3 id="页面静态化方案"><a href="#页面静态化方案" class="headerlink" title="页面静态化方案"></a>页面静态化方案</h3><p>课程信息页面的访问量较大，并且课程信息发布后在一段时间不会修改，这里使用Freemarker静态化技术将课程信息页面静态化，提前生成html页面并通过媒资管理模块的文件服务上传到文件系统，用户浏览课程信息页面通过分布文件系统浏览，提高了课程信息页面访问性能。</p>
+<h3 id="课程搜索方案"><a href="#课程搜索方案" class="headerlink" title="课程搜索方案"></a>课程搜索方案</h3><p>本项目使用Elasticsearch对课程发布信息进行索引和搜索。</p>
+<h2 id="媒资管理模块"><a href="#媒资管理模块" class="headerlink" title="媒资管理模块"></a>媒资管理模块</h2><h3 id="断点续传流程"><a href="#断点续传流程" class="headerlink" title="断点续传流程"></a>断点续传流程</h3><p>下图是大文件上传的整体流程：</p>
+<p><img src="/../assets/Project-%E6%99%BA%E5%AD%A6%E8%BD%A9%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/Aspose.Words.47a7d76e-91f2-4c3e-b54a-929cdfaa0c47.026.png"></p>
+<ol>
+<li><p>前端上传文件前请求媒资接口层检查文件是否存在，如果已经存在则不再上传。</p>
+</li>
+<li><p>如果文件在系统不存在则前端开始上传，首先对视频文件进行分块</p>
+</li>
+<li><p>前端分块进行上传，上传前首先检查分块是否上传，如已上传则不再上传，如果未上传则开始上传分块。</p>
+</li>
+<li><p>前端请求媒资管理接口层请求上传分块。</p>
+</li>
+<li><p>接口层请求服务层上传分块。</p>
+</li>
+<li><p>服务端将分块信息上传到MinIO。</p>
+</li>
+<li><p>前端将分块上传完毕请求接口层合并分块。</p>
+</li>
+<li><p>接口层请求服务层合并分块。</p>
+</li>
+<li><p>服务层根据文件信息找到MinIO中的分块文件，下载到本地临时目录，将所有分块下载完毕后开始合并 。</p>
+</li>
+<li><p>合并完成将合并后的文件上传到MinIO。</p>
+</li>
+</ol>
+<h3 id="任务调度视频处理流程"><a href="#任务调度视频处理流程" class="headerlink" title="任务调度视频处理流程"></a>任务调度视频处理流程</h3><p>视频上传及处理的业务流程如下：</p>
+<p>上传视频成功向视频处理待处理表添加记录。</p>
+<p>视频处理的详细流程如下：</p>
+<p><img src="/../assets/Project-%E6%99%BA%E5%AD%A6%E8%BD%A9%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/Aspose.Words.47a7d76e-91f2-4c3e-b54a-929cdfaa0c47.027.png"></p>
+<p>1、任务调度中心广播作业分片。</p>
+<p>2、执行器收到广播作业分片，从数据库读取待处理任务。</p>
+<p>3、执行器根据任务内容从MinIO下载要处理的文件。</p>
+<p>4、执行器启动多线程去处理任务。</p>
+<p>5、任务处理完成，上传处理后的视频到MinIO。</p>
+<p>6、将更新任务处理结果，如果视频处理完成除了更新任务处理结果以外还要将文件的访问地址更新至任务处理表及文件表中，最后将任务完成记录写入历史表。</p>
+<p><strong>3.1.3 文件服务访问方案</strong></p>
+<p>在线插放课程视频，课程图片、视频这些都在MinIO文件系统存储，统一由Nginx代理，通过文件服务域名统一访问。如下图：</p>
+<p><img src="/../assets/Project-%E6%99%BA%E5%AD%A6%E8%BD%A9%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/Aspose.Words.47a7d76e-91f2-4c3e-b54a-929cdfaa0c47.028.png"></p>
+<p>在nginx配置文件服务的二级域名</p>
+<table>
+<thead>
+<tr>
+<th align="left">Java<br><code>   </code>server {<br><code>        </code>listen       80;<br><code>        </code>server_name  file.xuecheng-plus.com;<br>        ….</th>
+</tr>
+</thead>
+</table>
+<h2 id="认证授权模块"><a href="#认证授权模块" class="headerlink" title="认证授权模块"></a>认证授权模块</h2><p><strong>3.3.1 认证流程</strong></p>
+<p>下图是本项目的认证流程：</p>
+<p><img src="/../assets/Project-%E6%99%BA%E5%AD%A6%E8%BD%A9%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/Aspose.Words.47a7d76e-91f2-4c3e-b54a-929cdfaa0c47.029.png"></p>
+<p>1、提供统一认证入口。</p>
+<p>2、前端请求认证，认证通过颁发jwt令牌返给前端</p>
+<p>3、前端携带jwt令牌通过网关访问微服务。</p>
+<p>4、网关负责校验jwt令牌的合法性，微服务负责进行授权。</p>
+<p><strong>3.3.2 网关统一鉴权做什么?</strong></p>
+<p>所有访问微服务的请求都要经过网关，在网关进行用户身份的认证可以将很多非法的请求拦截到微服务以外，这叫做网关鉴权。</p>
+<p>下边需要明确网关鉴权的职责：</p>
+<p>1、网站白名单维护</p>
+<p>针对不用认证的URL全部放行。</p>
+<p>2、校验jwt的合法性。</p>
+<p>除了白名单剩下的就是需要认证的请求，网关需要验证jwt的合法性，jwt合法则说明用户身份合法，否则说明身份不合法则拒绝继续访问。</p>
+<p>3、网关不负责授权，授权在各个微服务进行，因为微服务最清楚用户有哪些权限访问哪些接口。</p>
+<p><strong>3.3.3 什么是OAuth2</strong></p>
+<p>OAUTH协议为用户资源的授权提供了一个安全的、开放而又简易的标准，Oauth协议目前发展到2.0版本，1.0版本过于复杂，2.0版本已得到广泛应用，通常一些大平台如微信、支付宝都提供OAuth2协议的认证授权接口。</p>
+<p>理解OAuth2协议可以通过一个例子，这里以微信扫码登录黑马网站为例说明：</p>
+<p><img src="/../assets/Project-%E6%99%BA%E5%AD%A6%E8%BD%A9%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/Aspose.Words.47a7d76e-91f2-4c3e-b54a-929cdfaa0c47.030.png"></p>
+<p>Oauth2.0认证流程如下：</p>
+<p>引自Oauth2.0协议rfc6749 <a target="_blank" rel="noopener" href="https://tools.ietf.org/html/rfc6749">https://tools.ietf.org/html/rfc6749</a></p>
+<p><img src="/../assets/Project-%E6%99%BA%E5%AD%A6%E8%BD%A9%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/Aspose.Words.47a7d76e-91f2-4c3e-b54a-929cdfaa0c47.031.png"></p>
+<p>Oauth2包括以下角色：</p>
+<p>1、客户端</p>
+<p>本身不存储资源，需要通过资源拥有者的授权去请求资源服务器的资源，比如：手机客户端、浏览器等。</p>
+<p>上边示例中黑马网站即为客户端，它需要通过浏览器打开。</p>
+<p>2、资源拥有者</p>
+<p>通常为用户，也可以是应用程序，即该资源的拥有者。</p>
+<p>A表示 客户端请求资源拥有者授权。</p>
+<p>B表示 资源拥有者授权客户端即黑马网站访问自己的用户信息。</p>
+<p>3、授权服务器（也称认证服务器）</p>
+<p>认证服务器对资源拥有者进行认证，还会对客户端进行认证并颁发令牌。</p>
+<p>C 客户端即黑马网站携带授权码请求认证。</p>
+<p>D认证通过颁发令牌。</p>
+<p>4、资源服务器</p>
+<p>存储资源的服务器。</p>
+<p>E表示客户端即黑马网站携带令牌请求资源服务器获取资源。</p>
+<p>F表示资源服务器校验令牌通过后提供受保护资源。</p>
+<p><strong>3.3.2 微信扫码流程</strong></p>
+<p>根据OAuth2协议授权码流程，结合本项目自身特点，分析接入微信扫码登录的流程如下：</p>
+<p><img src="/../assets/Project-%E6%99%BA%E5%AD%A6%E8%BD%A9%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/Aspose.Words.47a7d76e-91f2-4c3e-b54a-929cdfaa0c47.032.png"></p>
+<p>本项目认证服务需要做哪些事？</p>
+<p>1、需要定义接口接收微信下发的授权码。</p>
+<p>2、收到授权码调用微信接口申请令牌。</p>
+<p>3、申请到令牌调用微信获取用户信息</p>
+<p>4、获取用户信息成功将其写入本项目用户中心数据库。</p>
+<p>5、最后重定向到浏览器自动登录。</p>
+<p><strong>3.3.3 授权相关的数据模型</strong></p>
+<p>本项目授权相关的数据表如下：</p>
+<p><img src="/../assets/Project-%E6%99%BA%E5%AD%A6%E8%BD%A9%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/Aspose.Words.47a7d76e-91f2-4c3e-b54a-929cdfaa0c47.033.png"></p>
+<p>说明如下：</p>
+<p>xc_user：用户表，存储了系统用户信息，用户类型包括：学生、老师、管理员等</p>
+<p>xc_role：角色表，存储了系统的角色信息，学生、老师、教学管理员、系统管理员等。</p>
+<p>xc_user_role：用户角色表，一个用户可拥有多个角色，一个角色可被多个用户所拥有</p>
+<p>xc_menu:模块表，记录了菜单及菜单下的权限</p>
+<p>xc_permission:角色权限表，一个角色可拥有多个权限，一个权限可被多个角色所拥有</p>
+<p>如何查询用户的权限？</p>
+<table>
+<thead>
+<tr>
+<th align="left">Java<br>SELECT * FROM xc_menu WHERE id IN(<br><code>    </code>SELECT menu_id FROM xc_permission WHERE role_id IN(<br><code>        </code>SELECT role_id FROM xc_user_role WHERE user_id &#x3D; ‘49’<br><code>    </code>)<br>)</th>
+</tr>
+</thead>
+</table>
+<p><strong>3.3.4 验证码校验流程</strong></p>
+<p>验证码服务对外提供的接口有：</p>
+<p>1、生成验证码</p>
+<p>2、校验验证码。</p>
+<p>验证码服务如何生成并校验验证码？</p>
+<p>拿图片验证码举例：</p>
+<p>1、先生成一个指定位数的验证码，根据需要可能是数字、数字字母组合或文字。</p>
+<p>2、根据生成的验证码生成一个图片并返回给页面</p>
+<p>3、给生成的验证码分配一个key，将key和验证码一同存入缓存。这个key和图片一同返回给页面。</p>
+<p>4、用户输入验证码，连同key一同提交至认证服务。</p>
+<p>5、认证服务拿key和输入的验证码请求验证码服务去校验</p>
+<p>6、验证码服务根据key从缓存取出正确的验证码和用户输入的验证码进行比对，如果相同则校验通过，否则不通过。</p>
+<p><img src="/../assets/Project-%E6%99%BA%E5%AD%A6%E8%BD%A9%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/Aspose.Words.47a7d76e-91f2-4c3e-b54a-929cdfaa0c47.034.png"></p>
+<p><strong>3.3.5 什么是JWT令牌</strong></p>
+<p>JSON Web Token（JWT）是一种使用JSON格式传递数据的网络令牌技术，它是一个开放的行业标准（RFC 7519），用于在通信双方传递json对象，传递的信息经过数字签名可以被验证和信任，它可以使用HMAC算法或使用RSA的公钥&#x2F;私钥对来签名，防止内容篡改。</p>
+<p>JWT令牌的优点：</p>
+<p>1、jwt基于json，非常方便解析。</p>
+<p>2、可以在令牌中自定义丰富的内容，易扩展。</p>
+<p>3、通过非对称加密算法及数字签名技术，JWT防止篡改，安全性高。</p>
+<p>4、资源服务使用JWT可不依赖认证服务即可完成授权。</p>
+<p>缺点：</p>
+<p>１、JWT令牌较长，占存储空间比较大。</p>
+<p>JWT令牌由三部分组成，每部分中间使用点（.）分隔，比如：xxxxx.yyyyy.zzzzz</p>
+<ol>
+<li><p>Header        </p>
+<p><code>  </code>头部包括令牌的类型（即JWT）及使用的哈希算法（如HMAC SHA256或RSA）</p>
+</li>
+<li><p><code> </code>Payload</p>
+<p><code>  </code>第二部分是负载，内容也是一个json对象，它是存放有效信息的地方，它可以存放jwt提供的现成字段，比如：iss（签发者）,exp（过期时间戳）, sub（面向的用户）等，也可自定义字段。</p>
+</li>
+<li><p><code> </code>Signature</p>
+<p><code>  </code>第三部分是签名，此部分用于防止jwt内容被篡改。</p>
+<p><code>  </code>这个部分使用base64url将前两部分进行编码，编码后使用点（.）连接组成字符串，最后使用header中声明签名算法进行签名。</p>
+<p><strong>3.3.6 JWT令牌可以防止篡改吗？</strong></p>
+<p>JWT可以防止篡改。</p>
+<p>第三部分使用签名算法对第一部分和第二部分的内容进行签名，常用的签名算法是 HS256，常见的还有md5,sha 等，签名算法需要使用密钥进行签名，密钥不对外公开，并且签名是不可逆的，如果第三方更改了内容那么服务器验证签名就会失败，要想保证验证签名正确必须保证内容、密钥与签名前一致。</p>
+<p><img src="/../assets/Project-%E6%99%BA%E5%AD%A6%E8%BD%A9%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/Aspose.Words.47a7d76e-91f2-4c3e-b54a-929cdfaa0c47.035.png"></p>
+<p>从上图可以看出认证服务和资源服务使用相同的密钥，这叫对称加密，对称加密效率高，如果一旦密钥泄露可以伪造jwt令牌。</p>
+<p>JWT还可以使用非对称加密，认证服务自己保留私钥，将公钥下发给受信任的客户端、资源服务，公钥和私钥是配对的，成对的公钥和私钥才可以正常加密和解密，非对称加密效率低但相比对称加密非对称加密更安全一些。</p>
+<p><strong>3.3.7 Spring Security的工作原理是什么?</strong></p>
+<p>Spring Security所解决的问题就是<strong>安全访问控制</strong>，初始化Spring Security时，会创建一个名为SpringSecurityFilterChain的Servlet过滤器， 它是一个过滤器链，账号密码登录方式使用UsernamePasswordAuthenticationFilter过滤器。</p>
+<p>Spring Security的执行流程如下：</p>
+<p><img src="/../assets/Project-%E6%99%BA%E5%AD%A6%E8%BD%A9%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/Aspose.Words.47a7d76e-91f2-4c3e-b54a-929cdfaa0c47.036.png"></p>
+</li>
+<li><p>用户提交用户名、密码被SecurityFilterChain中的UsernamePasswordAuthenticationFilter过滤器获取到，封装为请求Authentication，通常情况下是UsernamePasswordAuthenticationToken这个实现类。</p>
+</li>
+<li><p>然后过滤器将Authentication提交至认证管理器（AuthenticationManager）进行认证</p>
+</li>
+<li><p>认证成功后，AuthenticationManager身份管理器返回一个被填充满了信息的（包括上面提到的权限信息，身份信息，细节信息，但密码通常会被移除）Authentication实例。</p>
+</li>
+<li><p>SecurityContextHolder安全上下文容器将第3步填充了信息的Authentication，通过SecurityContextHolder.getContext().setAuthentication(…)方法，设置到其中。</p>
+</li>
+<li><p><code>        </code>可以看出AuthenticationManager接口（认证管理器）是认证相关的核心接口，也是发起认证的出发点，它的实现类为ProviderManager。而Spring Security支持多种认证方式，因此ProviderManager维护着一个List<AuthenticationProvider>列表，存放多种认证方式，最终实际的认证工作是由AuthenticationProvider完成的。咱们知道web表单的对应的AuthenticationProvider实现类为DaoAuthenticationProvider，它的内部又维护着一个UserDetailsService负责UserDetails的获取。最终AuthenticationProvider将UserDetails填充至Authentication。</p>
+<h2 id="选课学习"><a href="#选课学习" class="headerlink" title="选课学习"></a>选课学习</h2><p><strong>3.4.1 选课流程</strong></p>
+<p>选课是将课程加入我的课程表的过程。</p>
+<p>对免费课程选课后可直接加入我的课程表，对收费课程选课后需要下单支付成功系统自动加入我的课程表。</p>
+<p>流程如下：</p>
+<p><img src="/../assets/Project-%E6%99%BA%E5%AD%A6%E8%BD%A9%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/Aspose.Words.47a7d76e-91f2-4c3e-b54a-929cdfaa0c47.037.png"></p>
+<p><strong>3.4.2 在线学习流程</strong></p>
+<p>课成功用户使可以在线学习，对于免费课程无需选课即可在线学习。</p>
+<p>流程如下：</p>
+<p><img src="/../assets/Project-%E6%99%BA%E5%AD%A6%E8%BD%A9%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/Aspose.Words.47a7d76e-91f2-4c3e-b54a-929cdfaa0c47.038.png"></p>
+<p><strong>3.4.3 免费课程续期流程</strong></p>
+<p>免费课程加入我的课程表默认为1年有效期，到期用户可申请续期，流程如下：</p>
+<p><img src="/../assets/Project-%E6%99%BA%E5%AD%A6%E8%BD%A9%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/Aspose.Words.47a7d76e-91f2-4c3e-b54a-929cdfaa0c47.039.png"></p>
+<h2 id="订单支付"><a href="#订单支付" class="headerlink" title="订单支付"></a>订单支付</h2><p><strong>3.5.1 支付流程</strong></p>
+<p>当用户点击“微信支付”或支付宝支付时执行流程如下：</p>
+<p><img src="/../assets/Project-%E6%99%BA%E5%AD%A6%E8%BD%A9%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/Aspose.Words.47a7d76e-91f2-4c3e-b54a-929cdfaa0c47.040.png"></p>
+<p>1、请求学习中心服务创建选课记录</p>
+<p>2、请求订单服务创建商品订单、生成支付二维码。</p>
+<p>3、用户扫码请求订单支付服务，订单支付服务请求第三方支付平台生成支付订单。</p>
+<p>4、前端唤起支付客户端，用户输入密码完成支付。</p>
+<p>5、第三方支付平台支付完成发起支付通知。</p>
+<p>6、订单支付服务接收支付通知结果。</p>
+<p>7、用户在前端查询支付结果，请求订单支付服务查询支付结果，如果订单支付服务还没有收到支付结果则请求学习中心查询支付结果。</p>
+<p>8、订单支付服务向学习中心服务通知支付结果。</p>
+<p>9、学习中心服务收到支付结果，如果支付成功则更新选课记录，并添加到我的课程表。</p>
+<p><strong>3.5.2 生成二维码执行流程</strong></p>
+<p>生成二维码执行流程如下：</p>
+<p><img src="/../assets/Project-%E6%99%BA%E5%AD%A6%E8%BD%A9%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/Aspose.Words.47a7d76e-91f2-4c3e-b54a-929cdfaa0c47.041.png"></p>
+<p>执行流程：</p>
+<p>1、前端调用学习中心服务的添加选课接口。</p>
+<p>2、添加选课成功请求订单服务生成支付二维码接口。</p>
+<p>3、生成二维码接口：创建商品订单、生成支付交易记录、生成二维码。</p>
+<p>4、将二维码返回到前端，用户扫码。</p>
+<p><strong>3.5.3 用户扫码支付流程</strong></p>
+<p>用户扫码支付流程如下：</p>
+<p><img src="/../assets/Project-%E6%99%BA%E5%AD%A6%E8%BD%A9%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/Aspose.Words.47a7d76e-91f2-4c3e-b54a-929cdfaa0c47.042.png"></p>
+<p><strong>3.5.4 支付结果通知流程</strong></p>
+<p>订单服务作为通用服务在订单支付成功后需要将支付结果通知给与订单服务对接的其它微服务。</p>
+<p>为了保证通知过程的简便还要保证消息全部到达消费服务，采用发布订阅的方式通知支付结果。</p>
+<p>学习中心服务：对收费课程选课需要支付，与订单服务对接完成支付。</p>
+<p>学习资源服务：对收费的学习资料需要购买后下载，与订单服务对接完成支付。</p>
+<p>订单服务完成支付后将支付结果发给每一个与订单服务对接的微服务，订单服务将消息发给交换机，由交换机广播消息，每个订阅消息的微服务都可以接收到支付结果.</p>
+<p>微服务收到支付结果根据订单的类型去更新自己的业务数据。</p>
+</li>
+</ol>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://PlanBBBBB.github.io">PlanB</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://planbbbbb.github.io/2024/03/09/Project-%E6%99%BA%E5%AD%A6%E8%BD%A9%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/">https://planbbbbb.github.io/2024/03/09/Project-%E6%99%BA%E5%AD%A6%E8%BD%A9%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://PlanBBBBB.github.io" target="_blank">PlanB's Blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="/./img/num2.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-full"><a href="/2024/03/01/Study-%E5%B8%83%E9%9A%86%E8%BF%87%E6%BB%A4%E5%99%A8/"><img class="prev-cover" src="/./img/num4.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">布隆过滤器</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/./img/%E5%A4%B4%E5%83%8F.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">PlanB</div><div class="author-info__description">欢迎来到PlanB的博客</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">36</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">12</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/PlanBBBBB"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/PlanBBBBB" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:2741718884@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">欢迎来到PlanB的博客！</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content is-expand"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%8B%E7%BB%8D%E9%A1%B9%E7%9B%AE"><span class="toc-number">1.</span> <span class="toc-text">介绍项目</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E6%8A%80%E6%9C%AF%E6%9E%B6%E6%9E%84%E7%9B%B8%E5%85%B3"><span class="toc-number">2.</span> <span class="toc-text">项目技术架构相关</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E9%87%87%E7%94%A8%E4%BB%80%E4%B9%88%E6%8A%80%E6%9C%AF%E6%9E%B6%E6%9E%84"><span class="toc-number">2.1.</span> <span class="toc-text">项目采用什么技术架构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Gateway%E6%80%8E%E4%B9%88%E7%94%A8%E7%9A%84%EF%BC%9F"><span class="toc-number">2.1.1.</span> <span class="toc-text">Gateway怎么用的？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Redis%E6%80%8E%E4%B9%88%E7%94%A8%E7%9A%84%EF%BC%9F"><span class="toc-number">2.1.2.</span> <span class="toc-text">Redis怎么用的？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#RabbitMQ%E6%80%8E%E4%B9%88%E7%94%A8%E7%9A%84%EF%BC%9F"><span class="toc-number">2.1.3.</span> <span class="toc-text">RabbitMQ怎么用的？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Elasticsearch%E6%80%8E%E4%B9%88%E7%94%A8%E7%9A%84%EF%BC%9F"><span class="toc-number">2.1.4.</span> <span class="toc-text">Elasticsearch怎么用的？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#XXL-Job%E6%80%8E%E4%B9%88%E7%94%A8%E7%9A%84%EF%BC%9F"><span class="toc-number">2.1.5.</span> <span class="toc-text">XXL-Job怎么用的？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%A5%E5%8F%A3%E5%BC%82%E5%B8%B8%E5%A6%82%E4%BD%95%E5%A4%84%E7%90%86%EF%BC%9F"><span class="toc-number">2.1.6.</span> <span class="toc-text">接口异常如何处理？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BE%AE%E6%9C%8D%E5%8A%A1%E4%B9%8B%E9%97%B4%E6%8E%A5%E5%8F%A3%E5%A6%82%E4%BD%95%E8%B0%83%E7%94%A8%EF%BC%9F"><span class="toc-number">2.1.7.</span> <span class="toc-text">微服务之间接口如何调用？</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%E4%B8%8E%E6%8A%80%E6%9C%AF%E6%96%B9%E6%A1%88"><span class="toc-number">3.</span> <span class="toc-text">业务流程与技术方案</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%85%E5%AE%B9%E7%AE%A1%E7%90%86%E6%A8%A1%E5%9D%97"><span class="toc-number">3.1.</span> <span class="toc-text">内容管理模块</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A1%B5%E9%9D%A2%E9%9D%99%E6%80%81%E5%8C%96%E6%96%B9%E6%A1%88"><span class="toc-number">3.1.1.</span> <span class="toc-text">页面静态化方案</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%BE%E7%A8%8B%E6%90%9C%E7%B4%A2%E6%96%B9%E6%A1%88"><span class="toc-number">3.1.2.</span> <span class="toc-text">课程搜索方案</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AA%92%E8%B5%84%E7%AE%A1%E7%90%86%E6%A8%A1%E5%9D%97"><span class="toc-number">3.2.</span> <span class="toc-text">媒资管理模块</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%AD%E7%82%B9%E7%BB%AD%E4%BC%A0%E6%B5%81%E7%A8%8B"><span class="toc-number">3.2.1.</span> <span class="toc-text">断点续传流程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E8%B0%83%E5%BA%A6%E8%A7%86%E9%A2%91%E5%A4%84%E7%90%86%E6%B5%81%E7%A8%8B"><span class="toc-number">3.2.2.</span> <span class="toc-text">任务调度视频处理流程</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%A4%E8%AF%81%E6%8E%88%E6%9D%83%E6%A8%A1%E5%9D%97"><span class="toc-number">3.3.</span> <span class="toc-text">认证授权模块</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%89%E8%AF%BE%E5%AD%A6%E4%B9%A0"><span class="toc-number">3.4.</span> <span class="toc-text">选课学习</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%A2%E5%8D%95%E6%94%AF%E4%BB%98"><span class="toc-number">3.5.</span> <span class="toc-text">订单支付</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024/03/09/Project-%E6%99%BA%E5%AD%A6%E8%BD%A9%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/" title="无题"><img src="/./img/num2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"/></a><div class="content"><a class="title" href="/2024/03/09/Project-%E6%99%BA%E5%AD%A6%E8%BD%A9%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/" title="无题">无题</a><time datetime="2024-03-09T00:19:00.000Z" title="发表于 2024-03-09 08:19:00">2024-03-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/03/01/Study-%E5%B8%83%E9%9A%86%E8%BF%87%E6%BB%A4%E5%99%A8/" title="布隆过滤器"><img src="/./img/num4.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="布隆过滤器"/></a><div class="content"><a class="title" href="/2024/03/01/Study-%E5%B8%83%E9%9A%86%E8%BF%87%E6%BB%A4%E5%99%A8/" title="布隆过滤器">布隆过滤器</a><time datetime="2024-03-01T08:18:48.692Z" title="发表于 2024-03-01 16:18:48">2024-03-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/02/28/Work-SQL/" title="SQL函数学习"><img src="/./img/num2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="SQL函数学习"/></a><div class="content"><a class="title" href="/2024/02/28/Work-SQL/" title="SQL函数学习">SQL函数学习</a><time datetime="2024-02-28T02:20:57.373Z" title="发表于 2024-02-28 10:20:57">2024-02-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/02/03/Work-%E5%AE%9E%E4%B9%A0%E6%94%B6%E8%8E%B7/" title="实习收获"><img src="/./img/num1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="实习收获"/></a><div class="content"><a class="title" href="/2024/02/03/Work-%E5%AE%9E%E4%B9%A0%E6%94%B6%E8%8E%B7/" title="实习收获">实习收获</a><time datetime="2024-02-03T10:32:08.744Z" title="发表于 2024-02-03 18:32:08">2024-02-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/01/21/Study-%E4%B8%80%E8%87%B4%E6%80%A7%E5%93%88%E5%B8%8C%E7%AE%97%E6%B3%95/" title="一致性哈希算法"><img src="/../img/structure.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="一致性哈希算法"/></a><div class="content"><a class="title" href="/2024/01/21/Study-%E4%B8%80%E8%87%B4%E6%80%A7%E5%93%88%E5%B8%8C%E7%AE%97%E6%B3%95/" title="一致性哈希算法">一致性哈希算法</a><time datetime="2024-01-21T14:01:10.179Z" title="发表于 2024-01-21 22:01:10">2024-01-21</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2022 - 2024 By PlanB</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">Hi, welcome to my <a href="https://PlanBBBBB.github.io">blog</a>!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">简</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"></div><script async src="/js/title.js"></script><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-show-text.min.js" data-mobile="true" data-text="0基础,学IT" data-fontsize="15px" data-random="false" async="async"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start --><script data-pjax>
+  function butterfly_swiper_injector_config(){
+    var parent_div_git = document.getElementById('recent-posts');
+    var item_html = '<div class="recent-post-item" style="height: auto;width: 100%"><div class="blog-slider swiper-container-fade swiper-container-horizontal" id="swiper_container"><div class="blog-slider__wrp swiper-wrapper" style="transition-duration: 0ms;"><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="2023/08/27/Study-JVM/" alt=""><img width="48" height="48" src="../img/jvm.png" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2023-08-27</span><a class="blog-slider__title" href="2023/08/27/Study-JVM/" alt="">JVM</a><div class="blog-slider__text">JVM学习</div><a class="blog-slider__button" href="2023/08/27/Study-JVM/" alt="">详情   </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="2023/01/05/Study-MySQL高级部分学习/" alt=""><img width="48" height="48" src="../img/mysql.png" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2023-01-05</span><a class="blog-slider__title" href="2023/01/05/Study-MySQL高级部分学习/" alt="">MySQL高级部分学习</a><div class="blog-slider__text">用于学习MySQL后续的进阶部分</div><a class="blog-slider__button" href="2023/01/05/Study-MySQL高级部分学习/" alt="">详情   </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="2023/08/03/Study-Redis相关知识/" alt=""><img width="48" height="48" src="../img/redis.png" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2023-08-03</span><a class="blog-slider__title" href="2023/08/03/Study-Redis相关知识/" alt="">Redis相关知识</a><div class="blog-slider__text">用于学习Redis相关知识</div><a class="blog-slider__button" href="2023/08/03/Study-Redis相关知识/" alt="">详情   </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="2023/09/05/Study-Java集合/" alt=""><img width="48" height="48" src="../img/java集合.png" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2023-09-05</span><a class="blog-slider__title" href="2023/09/05/Study-Java集合/" alt="">Java集合</a><div class="blog-slider__text">Java集合底层实现原理学习</div><a class="blog-slider__button" href="2023/09/05/Study-Java集合/" alt="">详情   </a></div></div></div><div class="blog-slider__pagination swiper-pagination-clickable swiper-pagination-bullets"></div></div></div>';
+    console.log('已挂载butterfly_swiper')
+    parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+    }
+  var elist = 'undefined'.split(',');
+  var cpage = location.pathname;
+  var epage = '/';
+  var flag = 0;
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    butterfly_swiper_injector_config();
+  }
+  else if (epage === cpage){
+    butterfly_swiper_injector_config();
+  }
+  </script><script defer src="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.js"></script><script defer data-pjax src="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper_init.js"></script><script data-pjax>
+    function butterfly_categories_card_injector_config(){
+      var parent_div_git = document.getElementById('recent-posts');
+      var item_html = '<style>li.categoryBar-list-item{width:32.3%;}.categoryBar-list{max-height: 190px;overflow:auto;}.categoryBar-list::-webkit-scrollbar{width:0!important}@media screen and (max-width: 650px){.categoryBar-list{max-height: 160px;}}</style><div class="recent-post-item" style="height:auto;width:100%;padding:0px;"><div id="categoryBar"><ul class="categoryBar-list"><li class="categoryBar-list-item" style="background:url(./img/project.png);"> <a class="categoryBar-list-link" href="categories/Project/">Project</a><span class="categoryBar-list-count">4</span><span class="categoryBar-list-descr">Poject</span></li><li class="categoryBar-list-item" style="background:url(./img/study.png);"> <a class="categoryBar-list-link" href="categories/Study/">Study</a><span class="categoryBar-list-count">15</span><span class="categoryBar-list-descr">Study</span></li><li class="categoryBar-list-item" style="background:url(./img/面试.png);"> <a class="categoryBar-list-link" href="categories/Work/">Work</a><span class="categoryBar-list-count">3</span><span class="categoryBar-list-descr">面试</span></li><li class="categoryBar-list-item" style="background:url(./img/面经.png);"> <a class="categoryBar-list-link" href="categories/面经/">面经</a><span class="categoryBar-list-count">1</span><span class="categoryBar-list-descr">面经</span></li><li class="categoryBar-list-item" style="background:url(./img/work.png);"> <a class="categoryBar-list-link" href="categories/面试/">面试</a><span class="categoryBar-list-count">12</span><span class="categoryBar-list-descr">Work</span></li></ul></div></div>';
+      console.log('已挂载butterfly_categories_card')
+      parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+      }
+    if( document.getElementById('recent-posts') && (location.pathname ==='/'|| '/' ==='all')){
+    butterfly_categories_card_injector_config()
+    }
+  </script><div class="js-pjax"><script async="async">var arr = document.getElementsByClassName('recent-post-item');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__bounceInLeft');
+    arr[i].setAttribute('data-wow-duration', '800ms');
+    arr[i].setAttribute('data-wow-delay', '0ms');
+    arr[i].setAttribute('data-wow-offset', '100');
+    arr[i].setAttribute('data-wow-iteration', '1');
+  }</script><script async="async">var arr = document.getElementsByClassName('card-widget');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__bounceInRight');
+    arr[i].setAttribute('data-wow-duration', '');
+    arr[i].setAttribute('data-wow-delay', '');
+    arr[i].setAttribute('data-wow-offset', '');
+    arr[i].setAttribute('data-wow-iteration', '');
+  }</script></div><script defer src="https://npm.elemecdn.com/hexo-butterfly-wowjs/lib/wow.min.js"></script><script defer src="https://npm.elemecdn.com/hexo-butterfly-wowjs/lib/wow_init.js"></script><!-- hexo injector body_end end --></body></html>
