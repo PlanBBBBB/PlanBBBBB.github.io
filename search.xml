@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>美团笔试</title>
+      <link href="/2024/04/26/%E9%9D%A2%E7%BB%8F-%E7%BE%8E%E5%9B%A2%E7%AC%94%E8%AF%95/"/>
+      <url>/2024/04/26/%E9%9D%A2%E7%BB%8F-%E7%BE%8E%E5%9B%A2%E7%AC%94%E8%AF%95/</url>
+      
+        <content type="html"><![CDATA[<h1 id="第一题"><a href="#第一题" class="headerlink" title="第一题"></a>第一题</h1><h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>输入一个数n，要求构造一个长度为n的数组，改数组需要完成以下两个条件：</p><ol><li>所有元素不能全部相同</li><li>所有元素不能全部不相同</li></ol><blockquote><p>输入的n最小都是3</p></blockquote><h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><p>构造一个数组，前两个元素为1，后面的所有元素都无2即可。</p><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">~~~</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 第二题</span><br><span class="line"></span><br><span class="line">## 题目描述</span><br><span class="line"></span><br><span class="line">输入一个非零的数，至少是两位数，要求将这个数进行拆分，拆分出来得到的两个数相加，返回相加的最大值。</span><br><span class="line"></span><br><span class="line">用例：</span><br><span class="line"></span><br><span class="line"><span class="number">1.</span> 输入<span class="number">10</span>，拆分得到<span class="number">1</span>和<span class="number">0</span>相加得<span class="number">1</span>，<span class="number">1</span>最大则输出<span class="number">1</span>；</span><br><span class="line"></span><br><span class="line"><span class="number">2.</span> 输入-<span class="number">918</span>，拆分得到-<span class="number">9</span>和<span class="number">18</span>，相加得到<span class="number">9</span>最大，输出<span class="number">9</span>。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">## 解题思路</span><br><span class="line"></span><br><span class="line">可以分正数和负数进行讨论：</span><br><span class="line"></span><br><span class="line">如果是负数，取第一位的数与负号相连能得到最小的负数，此时加上除第一位的后面的数即是最大值；</span><br><span class="line"></span><br><span class="line">如果是正数，则有两种情况，第一种是取第一位的数和后面所有位的数相加，第二种是取最后一位的数和前面的除了最后一位的数相加，两个值比较取最大值即可。</span><br><span class="line"></span><br><span class="line">&gt; 原因：一个数位数越大他就越大，这里反而不应该取中间位来隔开相加，例如<span class="number">1111199999</span>这个数，从中间拆开得到两个五位数相加最多只能是六位数，而按上面的方式就是九位数了。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">## 代码</span><br><span class="line"></span><br><span class="line">~~~Java</span><br></pre></td></tr></table></figure><h1 id="第三题"><a href="#第三题" class="headerlink" title="第三题"></a>第三题</h1><p>暂时忘了。。。。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 面经 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 笔试 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title></title>
       <link href="/2024/03/24/Study-Vue/"/>
       <url>/2024/03/24/Study-Vue/</url>
