@@ -148,13 +148,25 @@
     
     
     <entry>
-      <title></title>
+      <title>Vue学习</title>
       <link href="/2024/03/24/Study-Vue/"/>
       <url>/2024/03/24/Study-Vue/</url>
       
         <content type="html"><![CDATA[<p><img src="/../assets/Study-Vue/image-20240324220355647.png" alt="image-20240324220355647"></p>]]></content>
       
       
+      <categories>
+          
+          <category> Study </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Vue </tag>
+            
+        </tags>
       
     </entry>
     
