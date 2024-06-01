@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Java并发编程</title>
+      <link href="/2024/06/01/Study-Java%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/"/>
+      <url>/2024/06/01/Study-Java%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/</url>
+      
+        <content type="html"><![CDATA[<h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><p>本篇文章学习自：<a href="https://space.bilibili.com/2035553929/channel/collectiondetail?sid=196389&spm_id_from=333.788.0.0">https://space.bilibili.com/2035553929/channel/collectiondetail?sid=196389&amp;spm_id_from=333.788.0.0</a></p><h1 id="内存屏障"><a href="#内存屏障" class="headerlink" title="内存屏障"></a>内存屏障</h1><h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><p>内存屏障:  是一种 <strong>屏障指令</strong>，它使得 CPU 或编译器 对 <strong>屏障指令的前 和后</strong> 所发出的内存操作 执行一个排序的约束。 也叫内存栅栏 或 栅栏指令</p><h2 id="内存屏障的能力"><a href="#内存屏障的能力" class="headerlink" title="内存屏障的能力"></a>内存屏障的能力</h2><ol><li>阻止屏障两边的指令重排序</li><li>写数据的时候 加了屏障的话，强制把写缓冲区的数据刷回到主内存中</li><li>读数据的时候 加了屏障的话，让工作内存&#x2F;CPU高速缓存当中缓存的数据失效，重新到主内存中获取新的数据</li></ol><h2 id="基本分类"><a href="#基本分类" class="headerlink" title="基本分类"></a>基本分类</h2><ol><li>读屏障: Load Barrier <mark><strong>在读指令之前</strong></mark>插入读屏障，让工作内存&#x2F;CPU 高速缓存当中缓存的数据失效，重新到主内存中获取新的数据</li><li>写屏障: Store Barrier : <mark><strong>在写指令之后</strong></mark>插入写屏障，强制把写缓冲区的数据刷回到主内存中</li></ol><h2 id="重排序和内存屏障"><a href="#重排序和内存屏障" class="headerlink" title="重排序和内存屏障"></a>重排序和内存屏障</h2><ol><li><p>重排序可能会给程序带来问题，因此，有些时候，我们希望告诉JVM，这里不需要排序</p><p>JVM 本身为了保证可见性:</p></li><li><p>对于编译器的重排序，JMM 会根据重排序的规则，禁止特定类型的编译器重排序</p></li><li><p>对于处理器的重排序，Java 编译器在生成指令序列的 适当位置，<strong>插入内存屏障指令</strong>，来禁止特定类型的处理器排序</p></li></ol><h2 id="JMM的内存屏障"><a href="#JMM的内存屏障" class="headerlink" title="JMM的内存屏障"></a>JMM的内存屏障</h2><p><code>LoadLoad Barriers</code> : Loadl; LoadLoad; Load2+<br>            禁止重排序:访问 Load2 的读取操作一定 不会重排到 Lad1之前<br>            保证 Load2 在读取的时候，自己缓存内到相应数据失效，Load2 会去主内存中获取最新的数据</p><p><code>LoadStore Barriers</code> :Load1; LoadStore; Store2+<br>            禁止重排序:一定是 Load1 读取数据完成后，才能让 Store2 及其之后的写出操作的数据，被其它线程看到。</p><p><code>StoreStore Barriers</code> :Store1; StoreStore; Store2<br>            禁止重排序:一定是 Store1的数据写出到主内存完成后，才能让Store2及其之后的写出操作的数据，被其它线程看到。<br>            保证Store1 指令写出去的数据，会强制被刷新回主内存中</p><p><code>StoreLoad Barriers</code> :Storel;StoreLoad; Load2<br>            禁止重排序:一定是 Store1的数据写出到主内存完成后，才能让Load2 来读取数据<br>            <mark><strong>同时保证：</strong></mark> 强制把写缓冲区的数据刷回到主内存中<br>                                    让工作内存&#x2F;CPU 高速缓存当中缓存的数据失效，重新到主内存中获取新的数据</p><h2 id="为什么说-StoreLoadBarriers-是最重的"><a href="#为什么说-StoreLoadBarriers-是最重的" class="headerlink" title="为什么说 StoreLoadBarriers 是最重的?"></a>为什么说 StoreLoadBarriers 是最重的?</h2><p>重: 就是跟内存交互次数多，交互延迟较大、消耗资源较多。</p><h2 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h2><p>这些屏障指令并不是处理器真实的执行指令，他们只是JMM 定义出来的跨平台的指令。</p><p>因为不同硬件实现内存屏障的方式并不相同，JMM 为了屏蔽这种底层硬件平台的不同，抽象出了这些内存屏障指令，在运行的时候，由JVM 来为不同的平台生成相应的机器码。</p><p>这些内存屏障指令，在不同的硬件平台上，可能会做一些优化，从而只支持部分的JMM的内存屏障指令。</p><p>在x86 机器上，就只有 StoreLoadBarricrs 是有效的，其它的都不支持，被替换成 nop，也就是空操作。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Study </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 并发编程 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>欢聚时代面试</title>
       <link href="/2024/05/30/%E9%9D%A2%E7%BB%8F-%E6%AC%A2%E8%81%9A%E6%97%B6%E4%BB%A3%E9%9D%A2%E8%AF%95/"/>
       <url>/2024/05/30/%E9%9D%A2%E7%BB%8F-%E6%AC%A2%E8%81%9A%E6%97%B6%E4%BB%A3%E9%9D%A2%E8%AF%95/</url>
@@ -696,7 +721,7 @@
       <link href="/2023/10/03/Study-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
       <url>/2023/10/03/Study-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</url>
       
-        <content type="html"><![CDATA[<p>[TOC]</p><h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><p>本篇文章学习自</p><h1 id="内存管理"><a href="#内存管理" class="headerlink" title="内存管理"></a>内存管理</h1><p>1</p><h1 id="进程管理"><a href="#进程管理" class="headerlink" title="进程管理"></a>进程管理</h1><p>1</p><h1 id="调度算法"><a href="#调度算法" class="headerlink" title="调度算法"></a>调度算法</h1><h1 id="文件系统"><a href="#文件系统" class="headerlink" title="文件系统"></a>文件系统</h1><h1 id="I-O设备管理"><a href="#I-O设备管理" class="headerlink" title="I&#x2F;O设备管理"></a>I&#x2F;O设备管理</h1>]]></content>
+        <content type="html"><![CDATA[<p>[TOC]</p><h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><p>本篇文章学习自<a href="https://xiaolincoding.com/os/">https://xiaolincoding.com/os/</a></p><h1 id="硬件结构"><a href="#硬件结构" class="headerlink" title="硬件结构"></a>硬件结构</h1><h1 id="内存管理"><a href="#内存管理" class="headerlink" title="内存管理"></a>内存管理</h1><h1 id="进程管理"><a href="#进程管理" class="headerlink" title="进程管理"></a>进程管理</h1><p>1</p><h1 id="调度算法"><a href="#调度算法" class="headerlink" title="调度算法"></a>调度算法</h1><h1 id="文件系统"><a href="#文件系统" class="headerlink" title="文件系统"></a>文件系统</h1><h1 id="I-O设备管理"><a href="#I-O设备管理" class="headerlink" title="I&#x2F;O设备管理"></a>I&#x2F;O设备管理</h1>]]></content>
       
       
       <categories>
