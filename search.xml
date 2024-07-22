@@ -4,6 +4,44 @@
   
     
     <entry>
+      <title>Nginx</title>
+      <link href="/2024/07/22/Study-Nginx/"/>
+      <url>/2024/07/22/Study-Nginx/</url>
+      
+        <content type="html"><![CDATA[<h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1>]]></content>
+      
+      
+      <categories>
+          
+          <category> Study </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>计算机网络面试篇</title>
+      <link href="/2024/07/22/%E9%9D%A2%E8%AF%95-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+      <url>/2024/07/22/%E9%9D%A2%E8%AF%95-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</url>
+      
+        <content type="html"><![CDATA[<h1 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h1><h1 id="DNS"><a href="#DNS" class="headerlink" title="DNS"></a>DNS</h1><h1 id="TCP"><a href="#TCP" class="headerlink" title="TCP"></a>TCP</h1><h1 id="UDP"><a href="#UDP" class="headerlink" title="UDP"></a>UDP</h1><h1 id="WebSocket"><a href="#WebSocket" class="headerlink" title="WebSocket"></a>WebSocket</h1><h1 id="HTTP-2"><a href="#HTTP-2" class="headerlink" title="HTTP&#x2F;2"></a>HTTP&#x2F;2</h1><h1 id="HTTP-3"><a href="#HTTP-3" class="headerlink" title="HTTP&#x2F;3"></a>HTTP&#x2F;3</h1>]]></content>
+      
+      
+      <categories>
+          
+          <category> 面试 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>消息实时推送汇总</title>
       <link href="/2024/07/21/Study-%E6%B6%88%E6%81%AF%E5%AE%9E%E6%97%B6%E6%8E%A8%E9%80%81/"/>
       <url>/2024/07/21/Study-%E6%B6%88%E6%81%AF%E5%AE%9E%E6%97%B6%E6%8E%A8%E9%80%81/</url>
